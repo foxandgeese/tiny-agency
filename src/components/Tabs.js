@@ -5,6 +5,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
+import SwipeableViews from "react-swipeable-views";
 
 const TabContainer = ({ children, dir }) => {
   return (
@@ -58,13 +59,17 @@ class MyTabs extends React.Component {
             ))}
           </Tabs>
         </AppBar>
-        <>
+        <SwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={this.state.value}
+          onChangeIndex={this.handleChangeIndex}
+        >
           {items.map(item => (
             <TabContainer key={item[0]} dir={theme.direction}>
               {item[2]}
             </TabContainer>
           ))}
-        </>
+        </SwipeableViews>
       </div>
     );
   }
