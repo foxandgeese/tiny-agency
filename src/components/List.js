@@ -88,7 +88,7 @@ const List = props => {
                   </Typography>
                 )}
                 <Typography
-                  component="p"
+                  component="div"
                   dangerouslySetInnerHTML={{ __html: html }}
                   variant="body2"
                 />
