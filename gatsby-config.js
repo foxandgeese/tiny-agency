@@ -16,9 +16,19 @@ module.exports = {
   },
   pathPrefix: "/tiny-agency",
   plugins: [
+    "gatsby-plugin-top-layout",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: "gatsby-plugin-material-ui",
+      // If you want to use styled components you should change the injection order.
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

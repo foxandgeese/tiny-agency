@@ -9,13 +9,13 @@ import Typography from "@material-ui/core/Typography";
 import { Alien } from "mdi-material-ui";
 import { Robot } from "mdi-material-ui";
 import logo from "../../images/logo.png";
-import withRoot from "../utils/withRoot";
 import Avatar from "@material-ui/core/Avatar";
 
 const styles = theme => ({
     angles: {
       color: theme.palette.secondary.light,
       opacity: 0.5,
+      fontWeight: "normal",
     },
     avatar: {
       width: "160px",
@@ -79,9 +79,11 @@ const styles = theme => ({
             <span className={classes.angles}>&lt;</span> hi{" "}
             <span className={classes.angles}>&gt;</span>
           </Typography>
+          <p />
           <Typography paragraph gutterBottom variant="body1" component="span">
             {preamble}
           </Typography>
+          <p />
           <Typography paragraph gutterBottom variant="body1" component="span">
             {defaultDescription}
           </Typography>
@@ -98,6 +100,7 @@ const styles = theme => ({
           <Typography paragraph gutterBottom variant="body1" component="span">
             {postamble}
           </Typography>
+          <p />
           <Typography
             paragraph
             color="primary"
@@ -160,4 +163,4 @@ export const query = graphql`
   }
 `;
 
-export default withRoot(withStyles(styles, { withTheme: true })(Home));
+export default withStyles(styles, { withTheme: true })(Home);

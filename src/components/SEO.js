@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-const SEO = props => (
+const Component = props => (
     <StaticQuery
       query={detailsQuery}
       render={data => {
@@ -32,10 +32,10 @@ const SEO = props => (
     }
   `;
 
-SEO.defaultProps = {
+Component.defaultProps = {
   lang: "en",
   meta: [],
   keywords: [],
 };
 
-export default SEO;
+export default Component;

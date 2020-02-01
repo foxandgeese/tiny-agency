@@ -27,6 +27,7 @@ const Footer = props => {
             </Hidden>{" "}
             {email}
           </Typography>
+          <br />
           <a
             href="https://github.com/foxandgeese/tiny-agency"
             target="_blank"

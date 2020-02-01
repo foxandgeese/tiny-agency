@@ -1,5 +1,6 @@
 {
   "name": "tiny-agency",
+  "license": "MIT",
   "version": "1.0.0",
   "author": "Peter Bray <peter@foxandgeese.com>",
   "description": "Simple Gatsby.js starter that uses material design and that's perfect for tiny agencies.",
@@ -11,23 +12,25 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "core-js": "^2.6.5",
+    "@material-ui/core": "^4.9.0",
+    "core-js": "^3.6.4",
     "gatsby": "^2.1.4",
     "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-google-analytics": "^2.0.14",
+    "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.5",
     "gh-pages": "^2.0.1",
-    "jss": "^9.8.7",
-    "mdi-material-ui": "^5.9.0",
+    "jss": "^10.0.4",
+    "mdi-material-ui": "^6.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-jss": "^8.6.1",
+    "react-jss": "^10.0.4",
+    "react-style-tag": "^2.0.1",
     "react-swipeable-views": "^0.13.1",
     "react-swipeable-views-utils": "^0.13.1"
   }

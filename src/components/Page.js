@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import Grid from "@material-ui/core/Grid";
+import { Style } from "react-style-tag";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
@@ -13,20 +14,20 @@ const styles = theme => ({
   },
 });
 
-class Page extends React.Component {
-  render() {
-    const { children, classes } = this.props;
-    return (
-      <div className={classes.topper}>
-        <Grid container justify="center" alignItems="stretch">
-          <Grid item xs className={classes.root}>
-            {children}
-            <Footer />
-          </Grid>
+const Component = ({ children, classes }) => {
+  return (
+    <div className={classes.topper}>
+      <Style>{`
+      body {background: #eee}
+    `}</Style>
+      <Grid container justify="center" alignItems="stretch">
+        <Grid item xs className={classes.root}>
+          {children}
+          <Footer />
         </Grid>
-      </div>
-    );
-  }
-}
+      </Grid>
+    </div>
+  );
+};
 
-export default withStyles(styles)(Page);
+export default withStyles(styles)(Component);

@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import SwipeableViews from "react-swipeable-views";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 
-function TabContainer({ children, dir }) {
+const TabContainer = ({ children, dir }) => {
   return (
     <Typography
       component="div"
@@ -17,7 +16,7 @@ function TabContainer({ children, dir }) {
       {children}
     </Typography>
   );
-}
+};
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
@@ -59,17 +58,13 @@ class MyTabs extends React.Component {
             ))}
           </Tabs>
         </AppBar>
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
-        >
+        <>
           {items.map(item => (
             <TabContainer key={item[0]} dir={theme.direction}>
               {item[2]}
             </TabContainer>
           ))}
-        </SwipeableViews>
+        </>
       </div>
     );
   }

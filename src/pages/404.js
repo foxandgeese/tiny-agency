@@ -1,12 +1,11 @@
 import React from "react";
 import Page from "../components/Page";
 import Typography from "@material-ui/core/Typography";
-import withRoot from "../utils/withRoot";
 
-class NotFoundPage extends React.Component {
-  render() {
-    return (
-      <Page title="Not Found">
+export default function Component() {
+  return (
+    <Page title="Not Found">
+      <center>
         <Typography
           paragraph
           color="primary"
@@ -16,9 +15,7 @@ class NotFoundPage extends React.Component {
         >
           Hey! You just hit a page that doesn't exist.
         </Typography>
-      </Page>
-    );
-  }
+      </center>
+    </Page>
+  );
 }
-
-export default withRoot(NotFoundPage);
