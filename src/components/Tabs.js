@@ -40,11 +40,9 @@ const Component = ({ items }) => {
           ))}
         </Tabs>
       </AppBar>
-      <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
-        {items.map(item => (
-          <TabContainer key={item[0]}>{item[2]}</TabContainer>
-        ))}
-      </SwipeableViews>
+      {items.map(item => (
+        <TabContainer key={item[0]}>{item[2]}</TabContainer>
+      ))}
     </>
   );
 };
