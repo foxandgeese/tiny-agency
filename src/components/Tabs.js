@@ -1,6 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -19,65 +17,36 @@ const TabContainer = ({ children, dir }) => {
   );
 };
 
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-};
-
-const styles = theme => ({
-  root: {},
-});
-
-class MyTabs extends React.Component {
-  state = {
-    value: 0,
+const Component = ({ items }) => {
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
-
-  handleChange = (event, value) => {
-    this.setState({ value });
+  const handleChangeIndex = index => {
+    setValue(index);
   };
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
-
-  render() {
-    const { classes, theme, items } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            centered
-          >
-            {items.map(item => (
-              <Tab key={item[0]} label={item[0]} icon={item[1]} />
-            ))}
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
+  return (
+    <>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          centered
         >
           {items.map(item => (
-            <TabContainer key={item[0]} dir={theme.direction}>
-              {item[2]}
-            </TabContainer>
+            <Tab key={item[0]} label={item[0]} icon={item[1]} />
           ))}
-        </SwipeableViews>
-      </div>
-    );
-  }
-}
-
-MyTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+        </Tabs>
+      </AppBar>
+      <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
+        {items.map(item => (
+          <TabContainer key={item[0]}>{item[2]}</TabContainer>
+        ))}
+      </SwipeableViews>
+    </>
+  );
 };
 
-export default withStyles(styles, { withTheme: true })(MyTabs);
+export default Component;
