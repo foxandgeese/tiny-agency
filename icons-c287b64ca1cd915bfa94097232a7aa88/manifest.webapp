@@ -3,9 +3,9 @@
   "name": "tiny-agency",
   "description": null,
   "icons": {
-    "60": "//tiny-agency/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_60x60.png",
-    "128": "//tiny-agency/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_128x128.png",
-    "512": "//tiny-agency/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_512x512.png"
+    "60": "/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_60x60.png",
+    "128": "/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_128x128.png",
+    "512": "/icons-c287b64ca1cd915bfa94097232a7aa88/firefox_app_512x512.png"
   },
   "developer": {
     "name": null,
