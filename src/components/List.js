@@ -90,6 +90,7 @@ const List = props => {
                 <Typography
                   component="p"
                   dangerouslySetInnerHTML={{ __html: html }}
+                  variant="body2"
                 />
               </CardContent>
             </Card>
