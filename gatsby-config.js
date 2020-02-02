@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     company: "Fox and Geese",
     domain: "https://foxandgeese.com",
-    defaultTitle: "Website Change Monitoring Products and Services",
+    defaultTitle: "Fox and Geese: a digital agency offering serverless + react.js development",
     preamble:
       "We're a Portland, Oregon-based team of data scientists and software engineers.",
     defaultDescription:
