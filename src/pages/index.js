@@ -74,7 +74,7 @@ const styles = theme => ({
             color="primary"
             gutterBottom
             variant="h1"
-            component="span"
+            component="div"
           >
             <span className={classes.angles}>&lt;</span> hi{" "}
             <span className={classes.angles}>&gt;</span>
@@ -82,9 +82,7 @@ const styles = theme => ({
           <p />
           <Typography paragraph gutterBottom variant="body1" component="span">
             {preamble}
-          </Typography>
-          <p />
-          <Typography paragraph gutterBottom variant="body1" component="span">
+            <p />
             {defaultDescription}
           </Typography>
         </div>

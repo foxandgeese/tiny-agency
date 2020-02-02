@@ -20,10 +20,12 @@ const Component = ({ children, classes }) => {
       <Style>{`
       body {background: #eee}
     `}</Style>
-      <Grid container justify="center" alignItems="stretch">
-        <Grid item xs className={classes.root}>
-          {children}
-          <Footer />
+      <Grid container justify="center" alignItems="stretch" spacing={0}>
+        <Grid item xs={12} className={classes.root}>
+          <div style={{ padding: "16px" }}>
+            {children}
+            <Footer />
+          </div>
         </Grid>
       </Grid>
     </div>

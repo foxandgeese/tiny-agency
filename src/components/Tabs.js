@@ -2,28 +2,12 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import SwipeableViews from "react-swipeable-views";
-
-const TabContainer = ({ children, dir }) => {
-  return (
-    <Typography
-      component="div"
-      dir={dir}
-      style={{ height: "100%", padding: 8 * 3 }}
-    >
-      {children}
-    </Typography>
-  );
-};
 
 const Component = ({ items }) => {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
+    console.log(newValue);
     setValue(newValue);
-  };
-  const handleChangeIndex = index => {
-    setValue(index);
   };
   return (
     <>
@@ -34,17 +18,20 @@ const Component = ({ items }) => {
           indicatorColor="primary"
           textColor="primary"
           centered
+          variant="fullWidth"
         >
           {items.map(item => (
             <Tab key={item[0]} label={item[0]} icon={item[1]} />
           ))}
         </Tabs>
       </AppBar>
-      <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
-        {items.map(item => (
-          <TabContainer key={item[0]}>{item[2]}</TabContainer>
-        ))}
-      </SwipeableViews>
+      {items.map((item, index) => {
+        return (
+          <span style={{ display: index !== value ? "none" : "" }} key={index}>
+            {item[2]}
+          </span>
+        );
+      })}
     </>
   );
 };
