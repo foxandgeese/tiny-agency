@@ -3,11 +3,11 @@ module.exports = {
   siteMetadata: {
     company: "Fox and Geese",
     domain: "https://foxandgeese.com",
-    defaultTitle: "Fox and Geese: a digital agency offering serverless + react.js development",
+    defaultTitle:
+      "Fox and Geese: Digital Agency Providing Serverless + React.js Engineering",
     preamble:
       "We're a Portland, Oregon-based team of data scientists and software engineers.",
-    defaultDescription:
-      "We develop our own products. And provide software engineering and consulting to select clients.",
+    defaultDescription: "We develop exceptional products that meet real needs.",
     postamble: "Think we can help your project? We'd love to hear from you:",
     contact: {
       email: "hi@foxandgeese.com",
@@ -22,11 +22,6 @@ module.exports = {
     "gatsby-plugin-remove-serviceworker",
     {
       resolve: "gatsby-plugin-material-ui",
-      options: {
-        // stylesProvider: {
-        //   injectFirst: true,
-        // },
-      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
