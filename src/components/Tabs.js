@@ -6,7 +6,6 @@ import Tab from "@material-ui/core/Tab";
 const Component = ({ items }) => {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
-    console.log(newValue);
     setValue(newValue);
   };
   return (
