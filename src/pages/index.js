@@ -11,108 +11,108 @@ import { Robot } from "mdi-material-ui";
 import logo from "../../images/logo.png";
 import Avatar from "@material-ui/core/Avatar";
 
-const styles = theme => ({
-    angles: {
-      color: theme.palette.secondary.light,
-      opacity: 0.5,
-      fontWeight: "normal",
-    },
-    avatar: {
-      width: "160px",
-      height: "160px",
-      marginBottom: "40px",
-      backgroundColor: theme.palette.primary.light,
-    },
-    logo: {
-      width: "100px",
-      height: "100px",
-      border: "0",
-    },
-    text: {
-      textAlign: "center",
-    },
-    tabs: {
-      marginTop: "40px",
-      marginBottom: "40px",
-    },
-  }),
-  Home = props => {
-    const {
-      classes,
-      data: {
-        Products: { edges: products },
-        Services: { edges: services },
-        Basic: {
-          siteMetadata: {
-            domain,
-            company,
-            defaultTitle,
-            preamble,
-            postamble,
-            defaultDescription,
-            contact: { email },
-          },
+const styles = (theme) => ({
+  angles: {
+    color: theme.palette.secondary.light,
+    opacity: 0.5,
+    fontWeight: "normal",
+  },
+  avatar: {
+    width: "160px",
+    height: "160px",
+    marginBottom: "40px",
+    backgroundColor: theme.palette.primary.light,
+  },
+  logo: {
+    width: "100px",
+    height: "100px",
+    border: "0",
+  },
+  text: {
+    textAlign: "center",
+  },
+  tabs: {
+    marginTop: "40px",
+    marginBottom: "40px",
+  },
+});
+const Home = (props) => {
+  const {
+    classes,
+    data: {
+      Products: { edges: products },
+      Services: { edges: services },
+      Basic: {
+        siteMetadata: {
+          domain,
+          company,
+          defaultTitle,
+          preamble,
+          postamble,
+          defaultDescription,
+          contact: { email },
         },
       },
-    } = props;
-    return (
-      <Page>
-        <SEO title={defaultTitle}>
-          <meta name="description" content={defaultDescription} />
-          <link rel="canonical" href={domain} />
-        </SEO>
-        <div className={classes.text}>
-          <center>
-            <Avatar className={classes.avatar}>
-              <a href={domain}>
-                <img src={logo} alt={company} className={classes.logo} />
-              </a>
-            </Avatar>
-          </center>
-          <Typography
-            paragraph
-            color="primary"
-            gutterBottom
-            variant="h1"
-            component="div"
-          >
-            <span className={classes.angles}>&lt;</span> hi{" "}
-            <span className={classes.angles}>&gt;</span>
-          </Typography>
+    },
+  } = props;
+  return (
+    <Page>
+      <SEO title={defaultTitle}>
+        <meta content={defaultDescription} name="description" />
+        <link href={domain} rel="canonical" />
+      </SEO>
+      <div className={classes.text}>
+        <center>
+          <Avatar className={classes.avatar}>
+            <a href={domain}>
+              <img alt={company} className={classes.logo} src={logo} />
+            </a>
+          </Avatar>
+        </center>
+        <Typography
+          color="primary"
+          component="div"
+          gutterBottom
+          paragraph
+          variant="h1"
+        >
+          <span className={classes.angles}>&lt;</span> hi{" "}
+          <span className={classes.angles}>&gt;</span>
+        </Typography>
+        <p />
+        <Typography component="span" gutterBottom paragraph variant="body1">
+          {preamble}
           <p />
-          <Typography paragraph gutterBottom variant="body1" component="span">
-            {preamble}
-            <p />
-            {defaultDescription}
-          </Typography>
-        </div>
-        <div className={props.classes.tabs}>
-          <Tabs
-            items={[
-              ["Our Products", <Robot />, <List items={products} />],
-              ["Our Services", <Alien />, <List items={services} />],
-            ]}
-          />
-        </div>
-        <div className={classes.text}>
-          <Typography paragraph gutterBottom variant="body1" component="span">
-            {postamble}
-          </Typography>
-          <p />
-          <Typography
-            paragraph
-            color="primary"
-            gutterBottom
-            variant="h5"
-            component="span"
-          >
-            <span className={classes.angles}>&lt;</span> {email}{" "}
-            <span className={classes.angles}>&gt;</span>
-          </Typography>
-        </div>
-      </Page>
-    );
-  };
+          {defaultDescription}
+        </Typography>
+      </div>
+      <div className={props.classes.tabs}>
+        <Tabs
+          items={[
+            ["Our Products", <Robot />, <List items={products} />],
+            ["Our Services", <Alien />, <List items={services} />],
+          ]}
+        />
+      </div>
+      <div className={classes.text}>
+        <Typography component="span" gutterBottom paragraph variant="body1">
+          {postamble}
+        </Typography>
+        <p />
+        <Typography
+          color="primary"
+          component="span"
+          gutterBottom
+          paragraph
+          variant="h5"
+        >
+          <span className={classes.angles}>&lt;</span> {email}{" "}
+          <span className={classes.angles}>&gt;</span>
+        </Typography>
+      </div>
+    </Page>
+  );
+};
 
 export const query = graphql`
   query Name {

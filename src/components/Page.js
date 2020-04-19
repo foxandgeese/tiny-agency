@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { Style } from "react-style-tag";
 import { withStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const styles = () => ({
   topper: {
     backgroundColor: "#eee",
   },
@@ -20,8 +20,8 @@ const Component = ({ children, classes }) => {
       <Style>{`
       body {background: #eee}
     `}</Style>
-      <Grid container justify="center" alignItems="stretch" spacing={0}>
-        <Grid item xs={12} className={classes.root}>
+      <Grid alignItems="stretch" container justify="center" spacing={0}>
+        <Grid className={classes.root} item xs={12}>
           <div style={{ padding: "16px" }}>
             {children}
             <Footer />

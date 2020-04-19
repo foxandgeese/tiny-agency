@@ -10,23 +10,23 @@ const Component = ({ items }) => {
   };
   return (
     <>
-      <AppBar position="static" color="default">
+      <AppBar color="default" position="static">
         <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
           centered
+          indicatorColor="primary"
+          onChange={handleChange}
+          textColor="primary"
+          value={value}
           variant="fullWidth"
         >
-          {items.map(item => (
-            <Tab key={item[0]} label={item[0]} icon={item[1]} />
+          {items.map((item) => (
+            <Tab icon={item[1]} key={item[0]} label={item[0]} />
           ))}
         </Tabs>
       </AppBar>
       {items.map((item, index) => {
         return (
-          <span style={{ display: index !== value ? "none" : "" }} key={index}>
+          <span key={index} style={{ display: index !== value ? "none" : "" }}>
             {item[2]}
           </span>
         );

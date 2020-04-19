@@ -7,11 +7,11 @@ export default function Component() {
     <Page title="Not Found">
       <center>
         <Typography
-          paragraph
           color="primary"
-          gutterBottom
-          variant="h3"
           component="span"
+          gutterBottom
+          paragraph
+          variant="h3"
         >
           Hey! You just hit a page that doesn't exist.
         </Typography>

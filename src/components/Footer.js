@@ -15,11 +15,11 @@ const Footer = (props) => {
     <>
       <Divider style={{ marginTop: "48px", marginBottom: "24px" }} />
       <footer
-        style={{ marginBottom: "24px", whiteSpace: "nowrap" }}
         id="footer"
+        style={{ marginBottom: "24px", whiteSpace: "nowrap" }}
       >
         <div style={{ textAlign: "center" }}>
-          <Typography variant="caption" component="span">
+          <Typography component="span" variant="caption">
             ©{new Date().getFullYear()} {company}{" "}
             <Hidden only={["xs", "sm"]}>–</Hidden>
             <Hidden only={["xl", "lg", "md"]}>
@@ -30,8 +30,8 @@ const Footer = (props) => {
           <br />
           <a
             href="https://github.com/foxandgeese/tiny-agency"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             <IconButton>
               <Github />
@@ -43,7 +43,7 @@ const Footer = (props) => {
   );
 };
 
-export default (props) => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {

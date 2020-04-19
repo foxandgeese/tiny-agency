@@ -6,7 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const styles = () => ({
   card: {
     height: "100%",
   },
@@ -24,24 +24,24 @@ const styles = theme => ({
   },
 });
 
-const Link = props =>
+const Link = (props) =>
   props.siteLink ? (
     <a href={props.siteLink}>{props.children}</a>
   ) : (
     <>{props.children}</>
   );
 
-const List = props => {
+const List = (props) => {
   const { classes } = props;
   return (
     <Grid
-      spacing={2}
-      container
-      justify="center"
       alignItems="stretch"
       className={classes.grid}
+      container
+      justify="center"
+      spacing={2}
     >
-      {props.items.map(edge => {
+      {props.items.map((edge) => {
         const {
           node: {
             html,
@@ -55,21 +55,19 @@ const List = props => {
           },
         } = edge;
         return (
-          <Grid item xs={12} md={4} key={title}>
+          <Grid item key={title} md={4} xs={12}>
             <Card className={classes.card}>
-              {siteLink ? (
-                undefined
-              ) : (
-                <CardMedia image={imageLink} className={classes.cardMedia} />
+              {siteLink ? undefined : (
+                <CardMedia className={classes.cardMedia} image={imageLink} />
               )}
               <CardContent>
                 {siteLink ? (
                   <center>
                     <Link siteLink={siteLink}>
                       <img
-                        src={imageLink}
                         alt={title}
                         className={classes.imageLink}
+                        src={imageLink}
                         style={{
                           paddingTop: customTopPadding,
                           width: customWidth,
@@ -79,10 +77,10 @@ const List = props => {
                   </center>
                 ) : (
                   <Typography
+                    className={classes.titleText}
+                    component="h2"
                     gutterBottom
                     variant="h5"
-                    component="h2"
-                    className={classes.titleText}
                   >
                     <Link siteLink={siteLink}>{title}</Link>
                   </Typography>
