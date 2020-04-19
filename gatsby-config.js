@@ -49,6 +49,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data`,
+        name: "data",
+        ignore: [`**/\.*`],
+      },
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./images/logo.png",
