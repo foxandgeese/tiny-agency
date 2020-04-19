@@ -31,6 +31,12 @@ const styles = (theme) => ({
   text: {
     textAlign: "center",
   },
+  h1: {
+    fontSize: "5em",
+  },
+  h2: {
+    fontSize: "1.6em",
+  },
   tabs: {
     marginTop: "40px",
     marginBottom: "40px",
@@ -70,19 +76,18 @@ const Home = (props) => {
           </Avatar>
         </center>
         <Typography
+          className={classes.h1}
           color="primary"
-          component="div"
-          gutterBottom
           paragraph
           variant="h1"
         >
-          <span className={classes.angles}>&lt;</span> hi{" "}
+          <span className={classes.angles}>&lt;</span> hello{" "}
           <span className={classes.angles}>&gt;</span>
         </Typography>
-        <p />
-        <Typography component="span" gutterBottom paragraph variant="body1">
+        <Typography className={classes.h2} paragraph variant="h2">
           {preamble}
-          <p />
+        </Typography>
+        <Typography className={classes.h2} paragraph variant="h2">
           {defaultDescription}
         </Typography>
       </div>
@@ -95,17 +100,10 @@ const Home = (props) => {
         />
       </div>
       <div className={classes.text}>
-        <Typography component="span" gutterBottom paragraph variant="body1">
+        <Typography paragraph variant="body1">
           {postamble}
         </Typography>
-        <p />
-        <Typography
-          color="primary"
-          component="span"
-          gutterBottom
-          paragraph
-          variant="h5"
-        >
+        <Typography color="primary" paragraph variant="h5">
           <span className={classes.angles}>&lt;</span> {email}{" "}
           <span className={classes.angles}>&gt;</span>
         </Typography>
