@@ -4,9 +4,9 @@ import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import { GithubCircle } from "mdi-material-ui";
+import { Github } from "mdi-material-ui";
 
-const Footer = props => {
+const Footer = (props) => {
   const {
     company,
     contact: { email },
@@ -34,7 +34,7 @@ const Footer = props => {
             rel="noopener noreferrer"
           >
             <IconButton>
-              <GithubCircle />
+              <Github />
             </IconButton>
           </a>
         </div>
@@ -43,7 +43,7 @@ const Footer = props => {
   );
 };
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -57,6 +57,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Footer data={data} />}
+    render={(data) => <Footer data={data} />}
   />
 );
