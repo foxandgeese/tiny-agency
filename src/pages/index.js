@@ -36,6 +36,7 @@ const styles = (theme) => ({
   },
   h2: {
     fontSize: "1.6em",
+    fontWeight: "normal",
   },
   tabs: {
     marginTop: "40px",

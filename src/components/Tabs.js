@@ -24,6 +24,7 @@ const Component = ({ items }) => {
           ))}
         </Tabs>
       </AppBar>
+      <p />
       {items.map((item, index) => {
         return (
           <span key={index} style={{ display: index !== value ? "none" : "" }}>
