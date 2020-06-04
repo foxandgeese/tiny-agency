@@ -2,7 +2,7 @@
   "name": "tiny-agency",
   "version": "1.0.1",
   "author": "Peter Bray <peter@foxandgeese.com>",
-  "description": "Simple Gatsby.js starter that uses material design and that's perfect for tiny agencies.",
+  "description": "Super-simple Material Design starter.",
   "scripts": {
     "develop": "gatsby develop",
     "lint": "eslint src/ && prettier --check 'src/**/*.js'",
