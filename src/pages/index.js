@@ -92,6 +92,23 @@ const Home = (props) => {
           {defaultDescription}
         </Typography>
       </div>
+      <div className={props.classes.tabs}>
+        <Tabs
+          items={[
+            ["Our Products", <Robot />, <List items={products} />],
+            ["Our Services", <Alien />, <List items={services} />],
+          ]}
+        />
+      </div>
+      <div className={classes.text}>
+        <Typography paragraph variant="body1">
+          {postamble}
+        </Typography>
+        <Typography color="primary" paragraph variant="h5">
+          <span className={classes.angles}>&lt;</span> {email}{" "}
+          <span className={classes.angles}>&gt;</span>
+        </Typography>
+      </div>
     </Page>
   );
 };

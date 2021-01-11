@@ -3,10 +3,11 @@ module.exports = {
   siteMetadata: {
     company: "Fox and Geese",
     domain: "https://foxandgeese.com",
-    defaultTitle: "Fox and Geese: Digital Agency For Medical Practices",
-    preamble: "Fox and Geese: Digital Agency For Medical Practices",
-    defaultDescription:
-      "We provide exceptional products and services that meet real needs.",
+    defaultTitle:
+      "Fox and Geese: Digital Agency Providing Serverless + React.js Engineering",
+    preamble:
+      "We're a Portland, Oregon-based team of data scientists and software engineers.",
+    defaultDescription: "We develop exceptional products that meet real needs.",
     postamble: "Think we can help your project? We'd love to hear from you:",
     contact: {
       email: "hi@foxandgeese.com",
