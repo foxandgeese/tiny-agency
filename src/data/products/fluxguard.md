@@ -6,11 +6,6 @@ customWidth: "70%"
 customTopPadding: "50px"
 ---
 
-Designed for IT staff, Fluxguard enables sophisticated session
-orchestration to monitor, alert, and archive website changes.
-
-- CloudFormation
-- AWS Fargate
-- DynamoDB
-- React.js
-- Other goodies
+Fluxguard enables sophisticated session orchestration to monitor your digital
+portfolio for defects, defacement, and other problematic content, code, and
+design changes.

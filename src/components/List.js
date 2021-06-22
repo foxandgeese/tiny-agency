@@ -55,7 +55,7 @@ const List = (props) => {
           },
         } = edge;
         return (
-          <Grid item key={title} md={4} xs={12}>
+          <Grid item key={title} md={props.md || 4} xs={12}>
             <Card className={classes.card}>
               {siteLink ? undefined : (
                 <CardMedia className={classes.cardMedia} image={imageLink} />

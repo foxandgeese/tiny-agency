@@ -3,6 +3,10 @@ title: "Data Science"
 imageLink: "https://d3lubguj0jcn6d.cloudfront.net/bigdata_800_sm.jpg"
 ---
 
-Our primary focus for over 10 years has been automated crawling, processing, and monitoring changes across millions of websites. We excel at the "tools of the trade" for this big data experience.
+Our team of PhD data scientists leads the way in nimble machine learning
+insights generated from text.
 
-We complement "traditional" data modeling with machine learning and artificial intelligence.
+We are experts in Natural Language Processing, including Named Entity
+Recognition; topic modeling with Latent Dirichlet Allocation and other
+techniques; abstractive and extractive summarization and Q&A; explainable ML;
+sentiment analysis; and much more.
