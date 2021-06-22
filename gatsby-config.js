@@ -4,7 +4,7 @@ module.exports = {
     company: "Fox and Geese",
     domain: "https://foxandgeese.com",
     defaultTitle:
-      "Fox and Geese: Digital Agency Providing Serverless + React.js Engineering",
+      "Fox and Geese: Digital Agency Providing ML, Python, Node, React.js Engineering",
     preamble:
       "We're a Portland, Oregon-based team of data scientists and software engineers.",
     defaultDescription: "We develop exceptional products that meet real needs.",
@@ -50,17 +50,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Fox and Geese`,
+        short_name: `Fox and Geese`,
+        start_url: `/`,
+        background_color: `#eeeeee`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "./images/logo.png",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/data`,
         name: "data",
         ignore: [`**/\.*`],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./images/logo.png",
       },
     },
     {

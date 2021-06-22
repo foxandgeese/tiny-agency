@@ -1,6 +1,6 @@
 {
   "name": "tiny-agency",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Peter Bray <peter@foxandgeese.com>",
   "description": "Super-simple Material Design starter.",
   "scripts": {
@@ -15,15 +15,14 @@
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "core-js": "3.15.0",
-    "gatsby": "2.30.1",
-    "gatsby-plugin-favicon": "3.1.6",
-    "gatsby-plugin-google-analytics": "2.9.0",
-    "gatsby-plugin-manifest": "2.10.0",
-    "gatsby-plugin-material-ui": "2.1.10",
-    "gatsby-plugin-react-helmet": "3.8.0",
+    "gatsby": "3.7.2",
+    "gatsby-plugin-google-analytics": "3.7.1",
+    "gatsby-plugin-manifest": "^3.7.1",
+    "gatsby-plugin-material-ui": "3.0.1",
+    "gatsby-plugin-react-helmet": "4.7.1",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
-    "gatsby-source-filesystem": "2.9.0",
-    "gatsby-transformer-remark": "2.14.0",
+    "gatsby-source-filesystem": "3.7.1",
+    "gatsby-transformer-remark": "4.4.1",
     "gh-pages": "3.2.3",
     "jss": "10.6.0",
     "mdi-material-ui": "6.22.1",
@@ -31,8 +30,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
-    "react-jss": "10.6.0",
-    "react-style-tag": "2.0.3"
+    "react-jss": "10.6.0"
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
