@@ -1,2 +1,23 @@
 [build]
   environment = { NODE_VERSION = "14", YARN_VERSION = "1.22.10" }
+
+[[redirects]]
+  # Redirect default Netlify subdomain to primary domain.
+  from = "https://foxandgeese.netlify.com/*"
+  to = "https://foxandgeese.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Redirect CharmUX to FoxAndGeese.
+  from = "https://charmux.com/*"
+  to = "https://foxandgeese.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Redirect CharmUX to FoxAndGeese.
+  from = "https://www.charmux.com/*"
+  to = "https://foxandgeese.com/:splat"
+  status = 301
+  force = true
